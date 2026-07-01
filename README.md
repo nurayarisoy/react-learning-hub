@@ -71,3 +71,7 @@ Open `http://localhost:3000`.
 1. Create or update lesson content under `content/{locale}/lessons`.
 2. Keep frontmatter fields aligned across locales.
 3. Run `npm run lint && npm run typecheck && npm run content:validate && npm run build` before PR.
+
+## Open Source Backlog
+
+- Planned contributor-friendly tasks are tracked in `OPEN_SOURCE_BACKLOG.md`.

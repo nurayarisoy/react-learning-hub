@@ -1,0 +1,29 @@
+---
+title: "Lifting State and Composition"
+summary: "Share state between sibling components using parent ownership."
+difficulty: "intermediate"
+estimatedMinutes: 40
+---
+
+## Learning Goal
+
+Choose proper state ownership and reduce prop drilling pressure.
+
+## Core Ideas
+
+- Lift state to the nearest common parent.
+- Pass data down and callbacks up.
+- Compose UI from focused child components.
+
+## Example
+
+```tsx
+function TemperatureConverter() {
+  // shared state in parent
+  return null;
+}
+```
+
+## Practice
+
+Implement synced `CelsiusInput` and `FahrenheitInput` components.

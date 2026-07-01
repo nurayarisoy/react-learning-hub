@@ -1,0 +1,33 @@
+---
+title: "Components and Props"
+summary: "Build reusable component APIs and pass data through props."
+difficulty: "beginner"
+estimatedMinutes: 30
+---
+
+## Learning Goal
+
+Design small reusable components and define clear prop contracts.
+
+## Core Ideas
+
+- Components are composable functions.
+- Props are read-only inputs.
+- Keep components focused on one responsibility.
+
+## Example
+
+```tsx
+interface BadgeProps {
+  label: string;
+  tone?: "neutral" | "success";
+}
+
+function Badge({ label, tone = "neutral" }: BadgeProps) {
+  return <span data-tone={tone}>{label}</span>;
+}
+```
+
+## Practice
+
+Create `LessonMeta` with props: `difficulty`, `duration`, and `tags`.

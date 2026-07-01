@@ -1,0 +1,36 @@
+---
+title: "Bedingtes und Listen-Rendering"
+summary: "Rendere unterschiedliche UI-Zustaende und Listen sicher."
+difficulty: "beginner"
+estimatedMinutes: 30
+---
+
+## Lernziel
+
+Leere, Lade- und Erfolgszustaende sauber darstellen.
+
+## Kernideen
+
+- Bedingtes Rendering mit `if`, ternary und `&&`.
+- Listen mit `map` und stabilen `key`.
+- Keine Index-Keys bei veraenderlicher Reihenfolge.
+
+## Beispiel
+
+```tsx
+function LessonList({ lessons }: { lessons: Array<{ id: string; title: string }> }) {
+  if (lessons.length === 0) return <p>Noch keine Lektionen.</p>;
+
+  return (
+    <ul>
+      {lessons.map((lesson) => (
+        <li key={lesson.id}>{lesson.title}</li>
+      ))}
+    </ul>
+  );
+}
+```
+
+## Praxis
+
+Baue eine `TaskList` mit empty, loading und ready Zustand.

@@ -1,0 +1,33 @@
+---
+title: "Component ve Props"
+summary: "Tekrar kullanilabilir component API'leri tasarla ve props ile veri aktar."
+difficulty: "beginner"
+estimatedMinutes: 30
+---
+
+## Hedef
+
+Kucuk ve odakli componentler olusturup props sozlesmesi tanimlamak.
+
+## Temel Noktalar
+
+- Componentler birlestirilebilir fonksiyonlardir.
+- Props read-only girdidir.
+- Her component tek bir isi iyi yapmalidir.
+
+## Ornek
+
+```tsx
+interface BadgeProps {
+  label: string;
+  tone?: "neutral" | "success";
+}
+
+function Badge({ label, tone = "neutral" }: BadgeProps) {
+  return <span data-tone={tone}>{label}</span>;
+}
+```
+
+## Pratik
+
+`difficulty`, `duration` ve `tags` alanlarini gosteren `LessonMeta` component'i yaz.

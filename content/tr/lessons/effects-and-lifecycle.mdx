@@ -1,0 +1,34 @@
+---
+title: "Effect ve Yasam Dongusu Dusuncesi"
+summary: "useEffect'i sadece dis sistem senkronizasyonu icin kullan."
+difficulty: "intermediate"
+estimatedMinutes: 40
+---
+
+## Hedef
+
+`useEffect` ne zaman gerekli, ne zaman gereksiz ayirt etmek.
+
+## Temel Noktalar
+
+- Effect, React disi sistemlerle senkronizasyon icindir.
+- Turetilebilen degerler icin effect yerine hesaplama tercih edilir.
+- Dependency listesi dogru ve eksiksiz olmalidir.
+
+## Ornek
+
+```tsx
+import { useEffect } from "react";
+
+function PageTitle({ title }: { title: string }) {
+  useEffect(() => {
+    document.title = title;
+  }, [title]);
+
+  return null;
+}
+```
+
+## Pratik
+
+`window.resize` dinleyen bir component yaz ve cleanup dogru yap.

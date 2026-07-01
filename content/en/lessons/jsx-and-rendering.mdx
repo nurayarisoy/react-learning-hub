@@ -1,0 +1,33 @@
+---
+title: "JSX and Rendering"
+summary: "Learn how JSX maps to UI output and how React renders updates."
+difficulty: "beginner"
+estimatedMinutes: 25
+---
+
+## Learning Goal
+
+Understand how JSX becomes elements and how React updates the screen efficiently.
+
+## Core Ideas
+
+- JSX is syntax sugar for `React.createElement` style calls.
+- Components return JSX snapshots of UI.
+- React compares previous and next trees to apply minimal DOM updates.
+
+## Example
+
+```tsx
+function Welcome({ name }: { name: string }) {
+  return <h1>Hello, {name}</h1>;
+}
+```
+
+## Common Mistakes
+
+- Returning multiple sibling elements without a wrapper or fragment.
+- Mixing statements directly inside JSX blocks.
+
+## Practice
+
+Create a `GreetingCard` component that renders `title`, `subtitle`, and a CTA button.

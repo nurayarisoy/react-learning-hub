@@ -1,0 +1,29 @@
+---
+title: "State Yukari Tasima ve Composition"
+summary: "Kardes componentler arasinda state paylasimi icin parent sahipligini kullan."
+difficulty: "intermediate"
+estimatedMinutes: 40
+---
+
+## Hedef
+
+State'in nerede tutulacagina dogru karar verip prop akisini sade tutmak.
+
+## Temel Noktalar
+
+- State, en yakin ortak parent'a tasinir.
+- Veri asagi akar, aksiyon callback ile yukari gider.
+- UI kucuk parcalarla compose edilir.
+
+## Ornek
+
+```tsx
+function TemperatureConverter() {
+  // ortak state parent'ta tutulur
+  return null;
+}
+```
+
+## Pratik
+
+`CelsiusInput` ve `FahrenheitInput` componentlerini senkron calistir.

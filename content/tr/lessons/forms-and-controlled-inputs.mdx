@@ -1,0 +1,36 @@
+---
+title: "Formlar ve Controlled Input"
+summary: "Form state'ini React state ile yonetip ongorulebilir formlar olustur."
+difficulty: "intermediate"
+estimatedMinutes: 35
+---
+
+## Hedef
+
+Input degerlerini state ile kontrol etmek ve dogrulama eklemek.
+
+## Temel Noktalar
+
+- Controlled input: `value` + `onChange`.
+- Form state'i forma yakin tutulur.
+- Hatalar erken yakalanir ve net mesaj verilir.
+
+## Ornek
+
+```tsx
+import { useState } from "react";
+
+function EmailForm() {
+  const [email, setEmail] = useState("");
+
+  return (
+    <form>
+      <input value={email} onChange={(e) => setEmail(e.target.value)} />
+    </form>
+  );
+}
+```
+
+## Pratik
+
+`name` ve `email` alanlari olan bir kayit formu tasarla.

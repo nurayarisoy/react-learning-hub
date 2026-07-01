@@ -1,0 +1,37 @@
+---
+title: "State ve Eventler"
+summary: "Local state ve event handler kullanarak interaktif arayuzler olustur."
+difficulty: "beginner"
+estimatedMinutes: 35
+---
+
+## Hedef
+
+Kullanici etkilesimlerini state guncellemelerine dogru baglamak.
+
+## Temel Noktalar
+
+- `useState` ile local degisken yonetilir.
+- Event handler'lar state setter ile guncelleme yapar.
+- UI her zaman state'ten turetilir.
+
+## Ornek
+
+```tsx
+import { useState } from "react";
+
+function Counter() {
+  const [count, setCount] = useState(0);
+
+  return (
+    <div>
+      <p>{count}</p>
+      <button onClick={() => setCount((v) => v + 1)}>Arttir</button>
+    </div>
+  );
+}
+```
+
+## Pratik
+
+Begeni durumunu ve sayacini yoneten bir `LikeButton` olustur.

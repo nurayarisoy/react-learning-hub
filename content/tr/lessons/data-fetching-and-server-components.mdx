@@ -1,0 +1,29 @@
+---
+title: "Data Fetching ve Server Componentler"
+summary: "Next.js'te server-first render ve async veri akislarini anla."
+difficulty: "intermediate"
+estimatedMinutes: 45
+---
+
+## Hedef
+
+Veriyi server componentlerde cekip client bundle boyutunu azaltmak.
+
+## Temel Noktalar
+
+- Server componentler dogrudan `await` kullanabilir.
+- Client component sadece etkilesim gereken yerde kullanilir.
+- Veri cekme kodu goruntulemeye yakin tutulur.
+
+## Ornek
+
+```tsx
+export default async function UsersPage() {
+  const users = await fetch("https://example.com/api/users").then((r) => r.json());
+  return <pre>{JSON.stringify(users, null, 2)}</pre>;
+}
+```
+
+## Pratik
+
+Zorluk seviyesine gore gruplu lesson listesi olustur.

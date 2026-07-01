@@ -1,0 +1,37 @@
+---
+title: "State and Events"
+summary: "Use local state and event handlers to make UI interactive."
+difficulty: "beginner"
+estimatedMinutes: 35
+---
+
+## Learning Goal
+
+Manage local UI state and react to user events.
+
+## Core Ideas
+
+- Use `useState` for local mutable values.
+- Event handlers update state through setters.
+- Derive UI from state, not manual DOM mutation.
+
+## Example
+
+```tsx
+import { useState } from "react";
+
+function Counter() {
+  const [count, setCount] = useState(0);
+
+  return (
+    <div>
+      <p>{count}</p>
+      <button onClick={() => setCount((v) => v + 1)}>Increment</button>
+    </div>
+  );
+}
+```
+
+## Practice
+
+Build a `LikeButton` that toggles liked state and count.

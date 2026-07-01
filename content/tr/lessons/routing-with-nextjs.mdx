@@ -1,0 +1,30 @@
+---
+title: "Next.js App Router ile Yonlendirme"
+summary: "URL tabanli durum yonetimi ve sayfalar arasi gecisi modelle."
+difficulty: "intermediate"
+estimatedMinutes: 35
+---
+
+## Hedef
+
+Route segmentleri, dynamic paramlar ve `Link` kullanimini ogrenmek.
+
+## Temel Noktalar
+
+- Dosya sistemi route yapisini belirler.
+- Dynamic route icin `[slug]` kullanilir.
+- `Link` ile istemci tarafi gecis ve prefetch yapilir.
+
+## Ornek
+
+```tsx
+import Link from "next/link";
+
+export default function LessonsPage() {
+  return <Link href="/en/lessons/react-basics">Dersi ac</Link>;
+}
+```
+
+## Pratik
+
+Dynamic lesson route olusturup metadata'yi paramdan uret.

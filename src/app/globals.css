@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+:root {
+  --background: #fbfaf6;
+  --foreground: #181617;
+  --surface: #fffdf9;
+  --surface-strong: #f6f1e8;
+  --primary: #0f766e;
+  --primary-strong: #115e59;
+  --accent: #c2410c;
+  --muted: #6b625d;
+  --border: #e5dccf;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-display);
+  --font-mono: var(--font-mono);
+}
+
+body {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 10% 10%, #f6ede1 0, transparent 32%),
+    radial-gradient(circle at 90% 15%, #d9efe8 0, transparent 30%),
+    var(--background);
+  color: var(--foreground);
+  font-family: var(--font-display), "Avenir Next", "Trebuchet MS", sans-serif;
+}
+
+a {
+  color: var(--primary-strong);
+}
+
+.hub-shell {
+  width: min(1100px, 100% - 2rem);
+  margin-inline: auto;
+}
+
+.hub-card {
+  border: 1px solid var(--border);
+  background: color-mix(in oklab, var(--surface) 90%, white 10%);
+  border-radius: 1rem;
+}
+
+.hub-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}

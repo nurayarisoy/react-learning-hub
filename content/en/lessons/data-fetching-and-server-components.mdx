@@ -1,0 +1,29 @@
+---
+title: "Data Fetching and Server Components"
+summary: "Understand server-first rendering and async data patterns in Next.js."
+difficulty: "intermediate"
+estimatedMinutes: 45
+---
+
+## Learning Goal
+
+Fetch data in server components and keep client bundles small.
+
+## Core Ideas
+
+- Server components can await data directly.
+- Client components are used only for interactivity.
+- Keep data fetching close to where data is rendered.
+
+## Example
+
+```tsx
+export default async function UsersPage() {
+  const users = await fetch("https://example.com/api/users").then((r) => r.json());
+  return <pre>{JSON.stringify(users, null, 2)}</pre>;
+}
+```
+
+## Practice
+
+Build a lesson list page that fetches and groups content by difficulty.

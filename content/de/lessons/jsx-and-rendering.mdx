@@ -1,0 +1,28 @@
+---
+title: "JSX und Rendering"
+summary: "Lerne, wie JSX zu UI wird und wie React Updates rendert."
+difficulty: "beginner"
+estimatedMinutes: 25
+---
+
+## Lernziel
+
+Verstehen, wie JSX in Elemente umgesetzt wird und wie React den DOM aktualisiert.
+
+## Kernideen
+
+- JSX ist eine kuerzere Schreibweise fuer Element-Erzeugung.
+- Komponenten liefern UI-Snapshots.
+- React vergleicht alten und neuen Baum fuer minimale DOM-Updates.
+
+## Beispiel
+
+```tsx
+function Welcome({ name }: { name: string }) {
+  return <h1>Hallo, {name}</h1>;
+}
+```
+
+## Praxis
+
+Erstelle eine `GreetingCard` mit `title`, `subtitle` und CTA-Button.

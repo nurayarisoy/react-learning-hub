@@ -1,0 +1,33 @@
+---
+title: "Komponenten und Props"
+summary: "Baue wiederverwendbare Komponenten-APIs und uebergib Daten mit Props."
+difficulty: "beginner"
+estimatedMinutes: 30
+---
+
+## Lernziel
+
+Kleine, fokussierte Komponenten erstellen und klare Prop-Vertraege definieren.
+
+## Kernideen
+
+- Komponenten sind kombinierbare Funktionen.
+- Props sind read-only Eingaben.
+- Jede Komponente sollte eine klare Aufgabe haben.
+
+## Beispiel
+
+```tsx
+interface BadgeProps {
+  label: string;
+  tone?: "neutral" | "success";
+}
+
+function Badge({ label, tone = "neutral" }: BadgeProps) {
+  return <span data-tone={tone}>{label}</span>;
+}
+```
+
+## Praxis
+
+Baue `LessonMeta` mit `difficulty`, `duration` und `tags`.

@@ -1,0 +1,28 @@
+---
+title: "JSX ve Render Mantigi"
+summary: "JSX'in UI'a nasil donustugunu ve React'in guncellemeleri nasil yonettigini ogren."
+difficulty: "beginner"
+estimatedMinutes: 25
+---
+
+## Hedef
+
+JSX yazimini ve React render dongusunu dogru modellemek.
+
+## Temel Noktalar
+
+- JSX, element olusturma cagrilarina donusen bir yazimdir.
+- Componentler UI'in anlik gorunumunu dondurur.
+- React onceki ve yeni agaci karsilastirip minimum DOM guncellemesi yapar.
+
+## Ornek
+
+```tsx
+function Welcome({ name }: { name: string }) {
+  return <h1>Merhaba, {name}</h1>;
+}
+```
+
+## Pratik
+
+`title`, `subtitle` ve bir buton gosteren `GreetingCard` component'i yaz.

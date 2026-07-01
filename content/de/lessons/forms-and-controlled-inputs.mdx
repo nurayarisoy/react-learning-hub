@@ -1,0 +1,36 @@
+---
+title: "Formulare und Controlled Inputs"
+summary: "Baue vorhersagbare Formulare mit kontrollierten Inputs."
+difficulty: "intermediate"
+estimatedMinutes: 35
+---
+
+## Lernziel
+
+Formwerte ueber State steuern und Eingaben validieren.
+
+## Kernideen
+
+- Controlled Input kombiniert `value` und `onChange`.
+- Formlogik bleibt nahe an den Formularfeldern.
+- Klare Fehlermeldungen verbessern UX.
+
+## Beispiel
+
+```tsx
+import { useState } from "react";
+
+function EmailForm() {
+  const [email, setEmail] = useState("");
+
+  return (
+    <form>
+      <input value={email} onChange={(e) => setEmail(e.target.value)} />
+    </form>
+  );
+}
+```
+
+## Praxis
+
+Baue ein Signup-Formular mit `name`, `email` und Validierung.

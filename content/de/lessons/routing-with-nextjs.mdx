@@ -1,0 +1,30 @@
+---
+title: "Routing mit Next.js App Router"
+summary: "Nutze URL-gesteuerte Navigation und dynamische Segmente."
+difficulty: "intermediate"
+estimatedMinutes: 35
+---
+
+## Lernziel
+
+Route-Segmente, dynamische Parameter und `Link` sicher einsetzen.
+
+## Kernideen
+
+- Dateisystem-Routing mappt Ordner auf URLs.
+- Dynamische Segmente werden mit `[slug]` definiert.
+- `Link` bietet Client-Navigation mit Prefetch.
+
+## Beispiel
+
+```tsx
+import Link from "next/link";
+
+export default function LessonsPage() {
+  return <Link href="/en/lessons/react-basics">Lektion oeffnen</Link>;
+}
+```
+
+## Praxis
+
+Erstelle eine dynamische Lesson-Route und setze Metadata aus Parametern.

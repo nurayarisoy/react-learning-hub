@@ -1,0 +1,29 @@
+---
+title: "State Lifting und Composition"
+summary: "Teile State zwischen Geschwister-Komponenten ueber den Parent."
+difficulty: "intermediate"
+estimatedMinutes: 40
+---
+
+## Lernziel
+
+Die richtige Stelle fuer State-Eigentum waehlen.
+
+## Kernideen
+
+- State zum naechsten gemeinsamen Parent anheben.
+- Daten fliessen nach unten, Events per Callback nach oben.
+- UI aus kleinen, klaren Komponenten zusammensetzen.
+
+## Beispiel
+
+```tsx
+function TemperatureConverter() {
+  // gemeinsamer State im Parent
+  return null;
+}
+```
+
+## Praxis
+
+Synchronisiere `CelsiusInput` und `FahrenheitInput`.

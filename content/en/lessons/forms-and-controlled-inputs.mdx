@@ -1,0 +1,36 @@
+---
+title: "Forms and Controlled Inputs"
+summary: "Build predictable forms with controlled input patterns."
+difficulty: "intermediate"
+estimatedMinutes: 35
+---
+
+## Learning Goal
+
+Control form values through React state and validate user input.
+
+## Core Ideas
+
+- Controlled inputs bind `value` + `onChange`.
+- Keep form state close to form logic.
+- Validate early and provide clear error messages.
+
+## Example
+
+```tsx
+import { useState } from "react";
+
+function EmailForm() {
+  const [email, setEmail] = useState("");
+
+  return (
+    <form>
+      <input value={email} onChange={(e) => setEmail(e.target.value)} />
+    </form>
+  );
+}
+```
+
+## Practice
+
+Create a signup form with `name`, `email`, and client-side validation.

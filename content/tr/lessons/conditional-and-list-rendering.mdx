@@ -1,0 +1,36 @@
+---
+title: "Kosullu ve Liste Render"
+summary: "Farkli UI durumlarini ve koleksiyonlari guvenli sekilde render et."
+difficulty: "beginner"
+estimatedMinutes: 30
+---
+
+## Hedef
+
+Bos, yukleniyor ve dolu durumlarini temiz sekilde gostermek.
+
+## Temel Noktalar
+
+- Kosullu render: `if`, ternary, `&&`.
+- Liste render: `map` ve stabil `key`.
+- Sirasi degisebilen listelerde index key kullanmaktan kacin.
+
+## Ornek
+
+```tsx
+function LessonList({ lessons }: { lessons: Array<{ id: string; title: string }> }) {
+  if (lessons.length === 0) return <p>Henuz ders yok.</p>;
+
+  return (
+    <ul>
+      {lessons.map((lesson) => (
+        <li key={lesson.id}>{lesson.title}</li>
+      ))}
+    </ul>
+  );
+}
+```
+
+## Pratik
+
+`TaskList` component'i icin empty, loading ve success durumlarini yaz.

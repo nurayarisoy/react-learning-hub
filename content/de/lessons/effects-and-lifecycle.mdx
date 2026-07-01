@@ -1,0 +1,34 @@
+---
+title: "Effects und Lifecycle-Denken"
+summary: "Verwende useEffect nur zur Synchronisation mit externen Systemen."
+difficulty: "intermediate"
+estimatedMinutes: 40
+---
+
+## Lernziel
+
+Verstehen, wann `useEffect` notwendig ist und wann nicht.
+
+## Kernideen
+
+- Effects synchronisieren React mit externer Umgebung.
+- Abgeleitete Werte sollten ohne Effect berechnet werden.
+- Dependencies muessen vollstaendig sein.
+
+## Beispiel
+
+```tsx
+import { useEffect } from "react";
+
+function PageTitle({ title }: { title: string }) {
+  useEffect(() => {
+    document.title = title;
+  }, [title]);
+
+  return null;
+}
+```
+
+## Praxis
+
+Nutze `window.resize` in einer Komponente inklusive Cleanup.

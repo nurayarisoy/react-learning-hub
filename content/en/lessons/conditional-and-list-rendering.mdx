@@ -1,0 +1,36 @@
+---
+title: "Conditional and List Rendering"
+summary: "Render dynamic branches and collections safely."
+difficulty: "beginner"
+estimatedMinutes: 30
+---
+
+## Learning Goal
+
+Render fallback, loading, and mapped list states correctly.
+
+## Core Ideas
+
+- Conditional rendering with `if`, ternary, and logical `&&`.
+- List rendering with `map` and stable keys.
+- Avoid using array index as key when order can change.
+
+## Example
+
+```tsx
+function LessonList({ lessons }: { lessons: Array<{ id: string; title: string }> }) {
+  if (lessons.length === 0) return <p>No lessons yet.</p>;
+
+  return (
+    <ul>
+      {lessons.map((lesson) => (
+        <li key={lesson.id}>{lesson.title}</li>
+      ))}
+    </ul>
+  );
+}
+```
+
+## Practice
+
+Create a `TaskList` with empty, loading, and populated UI states.

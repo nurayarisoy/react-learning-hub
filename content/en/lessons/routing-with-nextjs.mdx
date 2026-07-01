@@ -1,0 +1,30 @@
+---
+title: "Routing with Next.js App Router"
+summary: "Navigate between pages and model URL driven application state."
+difficulty: "intermediate"
+estimatedMinutes: 35
+---
+
+## Learning Goal
+
+Use route segments, dynamic params, and links in a React + Next.js app.
+
+## Core Ideas
+
+- File-system routing maps folders to URLs.
+- Dynamic segments use `[slug]` style naming.
+- Use `Link` for client transitions and prefetching.
+
+## Example
+
+```tsx
+import Link from "next/link";
+
+export default function LessonsPage() {
+  return <Link href="/en/lessons/react-basics">Open lesson</Link>;
+}
+```
+
+## Practice
+
+Create a dynamic lesson route and render page metadata from params.

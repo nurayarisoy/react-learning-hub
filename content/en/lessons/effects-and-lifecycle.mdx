@@ -1,0 +1,34 @@
+---
+title: "Effects and Lifecycle Thinking"
+summary: "Use effects only for synchronization with external systems."
+difficulty: "intermediate"
+estimatedMinutes: 40
+---
+
+## Learning Goal
+
+Understand when `useEffect` is needed and when it is not.
+
+## Core Ideas
+
+- Effects sync React state with external systems.
+- Prefer derived values and event handlers over effects.
+- Always declare accurate dependencies.
+
+## Example
+
+```tsx
+import { useEffect } from "react";
+
+function PageTitle({ title }: { title: string }) {
+  useEffect(() => {
+    document.title = title;
+  }, [title]);
+
+  return null;
+}
+```
+
+## Practice
+
+Connect a component to `window.resize` and clean up listeners correctly.
